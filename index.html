@@ -4,7 +4,7 @@
     </head>
     <body>    
         <h1>Countdown Clock</h1>
-        <div id="clockdiv" class"clockdiv">
+        <div id="clockdiv" class="clockdiv">
             <div>
                 <span class="days"></span>
                 <div class="smalltext">Days</div>
@@ -24,8 +24,8 @@
         </div>
         <br>
         <form id="target">
-            <h1>New time</h1>
-            <div id="clockdiv2" class"clockdiv">
+            <h1>Set time</h1>
+            <div id="clockdiv2" class="clockdiv">
                 <div>
                     <span class="smalltext"><input type="text" id="days_inp" value="0" maxlength="2" size="2"></span>
                     <div class="smalltext">Days</div>
@@ -38,16 +38,15 @@
                     <span class="smalltext"><input type="text" id="minutes_inp" value="15" maxlength="2" size="2"></span>
                     <div class="smalltext">Minutes</div>
                 </div>
-                <div>
-                    <span class="smalltext"><input type="text" id="seconds_inp" value="0" maxlength="2" size="2"></span>
-                    <div class="smalltext">Seconds</div>
-                </div></br></br>
+                </br></br>
                 <div>
                     <input type="submit" value="Start" class="button">
+                    <input type="button" value="Pause" class="button" id="pause">
+                    <input type="button" value="Stop" class="button" id="stop">
                 </div>
             </div>
         </form>
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-        <script src="script.js"></script>
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/script.js"></script>
     </body>
 </html>

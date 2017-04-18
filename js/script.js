@@ -50,8 +50,9 @@ function getDeadline(){
     if(hours_inp != "0" && hours_inp != ""){ countTime = countTime * hours_inp * 60};
     var minutes_inp = document.getElementById("minutes_inp").value;
     if(minutes_inp != "0" && minutes_inp != ""){ countTime = countTime * minutes_inp *60};
-    var seconds_inp = document.getElementById("seconds_inp").value;
-    if(seconds_inp != "0" && seconds_inp != ""){ countTime = countTime + seconds_inp};
+    //var seconds_inp = document.getElementById("seconds_inp").value;
+    //if(seconds_inp != "0" && seconds_inp != ""){ countTime = countTime + seconds_inp};
+    var seconds_inp = 00;
 
     var deadline = new Date(Date.parse(new Date()) + countTime * 1000);
     return deadline;
@@ -63,5 +64,14 @@ $("#target").submit(function (e) {
     }
     var deadline = getDeadline();
     initializeClock('clockdiv', deadline);
+    e.preventDefault();
+  });
+
+$("#stop").click(function (e) {
+    clearInterval(timeinterval);
+    $(".days").text("");
+    $(".hours").text("");
+    $(".minutes").text("");
+    $(".seconds").text("");
     e.preventDefault();
   });
